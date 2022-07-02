@@ -143,3 +143,58 @@ const login = new Login("admin", "passwd")
 login.verifyAdmin();
 
 //5. ClickListener
+let LoginOk = function(button_id){
+  this.button = document.getElementById(button_id);
+
+  this.login = function(){
+    if (button_id === "loginSuccess") {
+      this.button.addEventListener("click", () => {
+        alert("Login success!");
+      });
+    } else {
+      this.button.addEventListener("click", () => {
+        alert("Login failed!");
+      });
+    }
+  };
+}
+
+const login_ok = new LoginOk("loginSuccess");
+login_ok.login();
+
+const login_fail = new LoginOk("loginFailure");
+login_fail.login();
+
+//6. ClickListener
+let loginWitUsername = (username, password) => {
+    return new Promise(function (resolve, reject) {
+      setTimeout(() => {
+        if (username === "admin" && password === "passwd") {
+          resolve("User logged in");
+        } else {
+          reject(new Error ("Error: invalid username or password"));
+        }
+      }, 1500);
+    });
+};
+
+let LoginAsync = function(button_id, user, passw){
+  this.button = document.getElementById(button_id);
+
+  this.login = function(){
+    this.button.addEventListener("click", async () => {
+      try {
+        const result = await loginWitUsername(user, passw);
+        alert(result);
+      } catch (err) {
+        alert(err.message);
+      }
+    });
+  };
+}
+
+const loginAsyncOk = new LoginAsync("loginSuccessAsync", "admin", "passwd");
+loginAsyncOk.login();
+
+const loginAsyncFail = new LoginAsync("loginFailureAsync", "other", "...");
+loginAsyncFail.login();

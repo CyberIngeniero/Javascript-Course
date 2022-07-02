@@ -1,16 +1,7 @@
 // Ejercicio 1
-<<<<<<< HEAD
 import './aboutme.js';
 console.log('Ejercicio 1');
-=======
-<<<<<<< HEAD
-import "./aboutme.js";
-console.log("Ejercicio 1");
-=======
-import './aboutme.js';
-console.log('Ejercicio 1');
->>>>>>> 17460cc (Resolucion actividad 1 sesion 1)
->>>>>>> ac39de4415ba21a9e6ebe009a2d62dd93dbcb623
+
 
 // Ejercicio 2
 console.log('Como el fichero se importa en el index.js, se ejecuta este en primer lugar.')
