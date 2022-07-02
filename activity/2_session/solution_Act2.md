@@ -7,7 +7,6 @@ let person = {
 
 Object.values(person);
 
-
 //2. this
 // referencia al objeto, que contiene el método donde se invoca
 let me = {
@@ -119,7 +118,6 @@ class InvertirCadena {
 
 const invertirCadena = new InvertirCadena("Excelente");
 invertirCadena.InverseString()
-
 
 //4.
 
