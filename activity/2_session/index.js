@@ -139,11 +139,11 @@ class Login{
   }
   verifyAdmin = () => {
     if(this.admin === this.user && this.passAdmin === this.password){
-      //alert("Admin logged in")
-      console.log("Admin logged in")
+      alert("Admin logged in")
+      //console.log("Admin logged in")
     }else{
-      //alert("User or passwd incorrect")
-      console.log("User or passwd incorrect")
+      alert("User or passwd incorrect")
+      //console.log("User or passwd incorrect")
     }
   }
 }
