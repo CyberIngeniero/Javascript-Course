@@ -91,6 +91,8 @@ runVehicle(HarleyDavidson);
 
 //  Ejercicio 4
 
+// type ValidTypes = string | number;
+
 function firstElement<T>(arr: T[]): T[] {
     return arr.slice(1);
 };
